@@ -6,6 +6,9 @@ import GlobalStyle from './theme/globalStyle'
 
 import logo from './logo.svg'
 
+import ThemeSelect from './components/ThemeSelect'
+import ThemeProvider from './theme/ThemeProvider'
+
 const AppWrapper = styled.div`
   text-align: center;
 `
@@ -53,19 +56,22 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <AppWrapper>
-          <AppHeader>
-            <AppLogo src={logo} alt="logo" />
-            <AppTitle>Welcome to React</AppTitle>
-          </AppHeader>
-          <AppIntro>
-            Bootstrapped with <code>create-react-app</code>.
-          </AppIntro>
-          <AppIntro>
-            Components styled with <code>styled-components</code>{' '}
-            <EmojiWrapper aria-label="nail polish" />
-          </AppIntro>
-        </AppWrapper>
+        <ThemeProvider>
+          <AppWrapper>
+            <AppHeader>
+              <AppLogo src={logo} alt="logo" />
+              <AppTitle>Welcome to React</AppTitle>
+            </AppHeader>
+            <AppIntro>
+              Bootstrapped with <code>create-react-app</code>.
+            </AppIntro>
+            <AppIntro>
+              Components styled with <code>styled-components</code>{' '}
+              <EmojiWrapper aria-label="nail polish" />
+            </AppIntro>
+            <ThemeSelect />
+          </AppWrapper>
+        </ThemeProvider>
         <GlobalStyle />
       </Fragment>
     )
