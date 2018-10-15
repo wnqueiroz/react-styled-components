@@ -16,4 +16,8 @@ export default createGlobalStyle`
   h1 {
     font-family: Montserrat;
   }
+
+  button { 
+    outline: none;
+  }
 `
