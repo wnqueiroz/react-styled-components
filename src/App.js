@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import styled, { keyframes } from 'styled-components'
+
+import GlobalStyle from './theme/globalStyle'
 
 import logo from './logo.svg'
 
@@ -50,19 +52,22 @@ const EmojiWrapper = styled.span.attrs({
 class App extends Component {
   render() {
     return (
-      <AppWrapper>
-        <AppHeader>
-          <AppLogo src={logo} alt="logo" />
-          <AppTitle>Welcome to React</AppTitle>
-        </AppHeader>
-        <AppIntro>
-          Bootstrapped with <code>create-react-app</code>.
-        </AppIntro>
-        <AppIntro>
-          Components styled with <code>styled-components</code>{' '}
-          <EmojiWrapper aria-label="nail polish" />
-        </AppIntro>
-      </AppWrapper>
+      <Fragment>
+        <AppWrapper>
+          <AppHeader>
+            <AppLogo src={logo} alt="logo" />
+            <AppTitle>Welcome to React</AppTitle>
+          </AppHeader>
+          <AppIntro>
+            Bootstrapped with <code>create-react-app</code>.
+          </AppIntro>
+          <AppIntro>
+            Components styled with <code>styled-components</code>{' '}
+            <EmojiWrapper aria-label="nail polish" />
+          </AppIntro>
+        </AppWrapper>
+        <GlobalStyle />
+      </Fragment>
     )
   }
 }
