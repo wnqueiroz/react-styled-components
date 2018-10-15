@@ -7,6 +7,7 @@ import GlobalStyle from './theme/globalStyle'
 import logo from './logo.svg'
 
 import ThemeSelect from './components/ThemeSelect'
+import Button from './components/Button'
 import ThemeProvider from './theme/ThemeProvider'
 
 const AppWrapper = styled.div`
@@ -31,10 +32,10 @@ const AppLogo = styled.img`
 `
 
 const AppHeader = styled.div`
-  background-color: #222;
   height: 12rem;
   padding: 1rem;
-  color: white;
+  color: ${props => props.theme.dark};
+  background-color: ${props => props.theme.primary};
 `
 
 const AppTitle = styled.h1`
@@ -69,6 +70,8 @@ class App extends Component {
               Components styled with <code>styled-components</code>{' '}
               <EmojiWrapper aria-label="nail polish" />
             </AppIntro>
+            <Button>Normal Button</Button>
+            <Button primary>Primary Button</Button>
             <ThemeSelect />
           </AppWrapper>
         </ThemeProvider>
