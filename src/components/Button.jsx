@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export default styled.button`
+const Button = styled.button`
   font-size: 1rem;
   border-radius: 5px;
   padding: 0.25rem 1rem;
@@ -20,3 +20,12 @@ export default styled.button`
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   }
 `
+
+export const BigButton = styled(Button)`
+  height: 3rem;
+  font-size: 2rem;
+  width: 40vw;
+  border-radius: 30px;
+`
+
+export default Button

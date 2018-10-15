@@ -7,7 +7,7 @@ import GlobalStyle from './theme/globalStyle'
 import logo from './logo.svg'
 
 import ThemeSelect from './components/ThemeSelect'
-import Button from './components/Button'
+import Button, { BigButton } from './components/Button'
 import ThemeProvider from './theme/ThemeProvider'
 
 const AppWrapper = styled.div`
@@ -73,6 +73,7 @@ class App extends Component {
             <Button>Normal Button</Button>
             <Button primary>Primary Button</Button>
             <ThemeSelect />
+            <BigButton>Big Button</BigButton>
           </AppWrapper>
         </ThemeProvider>
         <GlobalStyle />
